@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "uniteaSans";
+  src: url("../../frontend/fonts/UniteaSans-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  line-height: 25px;
+}
+
+@font-face {
+  font-family: "uniteaSansBold";
+  src: url("../../frontend/fonts/UniteaSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  line-height: 25px;
+}
+
+@font-face {
+  font-family: "uniteaSansSemiBold";
+  src: url("../../frontend/fonts/UniteaSans-SemiBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  line-height: 25px;
+}
+
+:root {
+  --color1: #1497df;
+  --color2: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "uniteaSans";
+}
+
+body {
+  font-family: 'uniteaSans', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color1);
+  padding: 0 15px;
+}
+
+header .fa-bars {
+  font-size: 35px !important;
+  cursor: pointer;
+}
+.mainPage {
+  background-color: white;
+  padding: 0 25px;
+  width: 100%;
+
+}
+
+.command {
+  width: 100%;
+  border: 1px solid lightgray;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.command:hover {
+  transform: translateY(-5px);
+}
+
+.command .command-body {
+  width: 100%;
+  display: flex; 
+  justify-content: space-between;  
+ 
+}
+
+.command-body img {
+  width: 150px; 
+  height: 160px; 
+
+}
+ 
+
+.command-body .command-header {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 0 10px;
+}
+
+.command-header .details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap:nowrap ;
+  border-right: 2px solid rgba(0, 0, 0, 0.53);
+  padding-right: 5px;
+}
+.details p{
+  text-shadow: 0 0 0.2px var(--color1);
+  font-size: large;
+  white-space: pre-wrap;
+}
+.details .price {
+  color: lightseagreen;
+}
+.details .date {
+  color: gray;
+}
+ 
+/*  */
+.command-header .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; 
+  border-top: 1px solid rgba(0, 0, 0, 0.263);
+  margin: 4px 0;
+}
+
+.options div {
+  margin-bottom: 10px;
+  padding: 0 12px;
+  border: 1px solid rgba(66, 3, 255, 0.06);
+ 
+}
+.options div .option-title {
+  text-shadow: 0 0 0.1px rgb(218 0 255);
+  color: black;
+}
+.options div .option-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  border: none;
+}
+.options div .option-items .option-item {
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-shadow: 0 0 1px #00000069;
+}
+
+.command-body .delete-command{
+   background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+ 
+  .delete-command:hover {
+  background-color: #d32f2f;
+}
+
+ .delete-command i {
+  margin-right: 5px;
+}
+ 
+
+/* ---------- NAVBAR CSS ----------- */
+
+#iconNavBar {
+  cursor: pointer;
+}
+
+#navBar {
+  background-image: linear-gradient(to bottom, #1497df, #284e64);
+  position: fixed;
+  width: 100vw;
+  height: 102vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#divIconNavBar {
+  width: 100vw;
+}
+
+#clossNavBar {
+  float: right;
+  font-size: 35px;
+  margin: 15px 41px 0 0;
+  color: white;
+  cursor: pointer;
+}
+
+#contentNavBar {
+  width: 100vw;
+  height: 400px;
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+  padding: 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10.39px;
+}
+
+#contentNavBar button {
+  width: 100%;
+  max-width: 400px;
+  height: 60.25px;
+  padding: 12.13px 20.79px;
+  border-radius: 6.93px;
+  background: var(--color1);
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+#contentNavBar button:hover {
+  background: var(--color2);
+  border: 2px solid var(--color1);
+  color: var(--color1);
+}
+
+@keyframes moveNavBar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 10;
+  }
+}
+
+@media (min-width: 800px) {
+  .command .command-body { 
+    align-items: center;
+}
+}
+@media (max-width: 800px) {
+  .command-body img {
+    width: 130px;  
+    height: 140px; 
+  }
+   .command .command-body {
+      flex-direction: column; 
+  }
+  .command-body .command-header {
+      flex-direction: column;
+  }
+  .command-body .delete-command{
+   padding: 0px 0px; }
+}
